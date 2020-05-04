@@ -44,7 +44,7 @@ public class Doctor {
 					}
 					
 					// Prepare the html table to be displayed
-					output = "<table class=\"table table-success\" border='1'><tr><th>NIC</th>"
+					output = "<table class=\'table table-bordered\' border='1'><tr><th>NIC</th>"
 							+ "<th>Name</th>"
 							+"<th>Email</th>"
 							+ "<th>Contact Number</th>"
@@ -75,10 +75,7 @@ public class Doctor {
 							String docPassword = rs.getString("docPassword");
 							
 							// Add into the html table
-							output += "<tr><td><input id='hidItemIDUpdate'"
-								   + "	name='hidItemIDUpdate'"
-								   + " type='hidden' value='" + docNic
-								   + "'>" + docNic + "</td>";
+							output += "<tr><td><input id='hidItemIDUpdate'name='hidItemIDUpdate' type='hidden' value='" + docNic + "'>" + docNic + "</td>";
 							output += "<td>" + docName + "</td>";
 							output += "<td>" + docEmail + "</td>";
 							output += "<td>" + docContact + "</td>";
@@ -90,14 +87,8 @@ public class Doctor {
 							output += "<td>" + docPassword + "</td>";
 							
 							// buttons
-							output += "<td><input name='btnUpdate'"
-								   + "type='button' value='Update'"
-								   + "class='btnUpdate btn btn-secondary'></td>"
-								   + "<td><input name='btnRemove'"
-								   + "type='button' value='Remove'"
-								   + " class='btnRemove btn btn-danger'	"
-								   + "data-itemid='"
-							       + docNic + "'>" + "</td></tr>";
+							output += "<td><input name='btnUpdate'type='button' value='Update'class='btnUpdate btn btn-success'></td>"
+								   + "<td><input name='btnRemove'type='button' value='Remove'class='btnRemove btn btn-danger'data-itemid='"+ docNic + "'></td></tr>";
 					}
 					con.close();
 					// Complete the html table
