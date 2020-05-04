@@ -106,7 +106,7 @@
                 </div>
             </div>
             <br>    
-            <div id="divItemsGrid">
+            <div id="divItemsGrid" style="overflow-x:auto;">
 					<%
 						Doctor itemObj = new Doctor();
 						out.print(itemObj.readDoctors());
