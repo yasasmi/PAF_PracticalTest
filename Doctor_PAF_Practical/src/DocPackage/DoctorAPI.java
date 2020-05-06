@@ -62,7 +62,7 @@ public class DoctorAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
 		String output = docObject.UpdateDoctors(paras.get("hidItemIDSave").toString(),
-												paras.get("docEmail").toString(),
+												paras.get("docEmail").toString().replace("%", "@").replace("40", ""),
 												paras.get("docContact").toString(),
 												paras.get("docFee").toString(), 
 												paras.get("docHospital").toString(), 
